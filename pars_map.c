@@ -6,15 +6,48 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:06:34 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 13:07:47 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 16:39:20 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
+void	check_around(t_data *data, int i, int j)
+{
+	if (!data->map[i + 1][j] || !data->map[i - 1][j]
+		|| !data->map[i][j + 1] || !data->map[i][j - 1])
+		error_mes(6, data);
+	if (!is_out(data->map[i + 1][j]) || !is_out(data->map[i - 1][j])
+		|| !is_out(data->map[i][j + 1]) || !is_out(data->map[i][j - 1]))
+		error_mes(6, data);
+}
+
+void	check_close_map(t_data *data)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (data->map[i])
+	{
+		j = 0;
+		while (data->map[i][j])
+		{
+			if (n_player(data->map[i][j]) || data->map[i][j] == '0')
+			{
+				if (i == 0 || i == tab_len(data->map) - 1)
+					error_mes(6, data);
+				check_around(data, i, j);
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
 void	pars_map(t_data *data)
 {
-	check_back_n(data);
+	check_bad_char(data);
 	check_n_player(data);
-	error_mes(54165, data);
+	check_close_map(data);
 }

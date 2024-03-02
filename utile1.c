@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 10:44:01 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 13:03:34 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 16:16:35 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,21 @@ int	ft_free2(char *str1, char *str2)
 
 void	error_mes(int n, t_data	*data)
 {
+	write(2, "Error\n", 7);
 	if (n == 0)
-		write(2, "Error\ncub3D need 2 arguments !\n", 32);
+		write(2, "cub3D need 2 arguments !\n", 26);
 	if (n == 1)
-		write(2, "Error\nWrong file name !\n", 24);
+		write(2, "Wrong file name !\n", 19);
 	if (n == 2)
-		write(2, "Error\nInvalide map !\n", 22);
+		write(2, "Invalide map !\n", 16);
 	if (n == 3)
-		write(2, "Error\nBad elements in the map file !", 37);
+		write(2, "Bad elements in the map file !\n", 32);
 	if (n == 4)
-		write(2, "Error\nThe file does not exist !\n", 33);
+		write(2, "The file does not exist !\n", 27);
 	if (n == 5)
-		write(2, "Error\nThe map have wrong numbers of player !\n", 46);
+		write(2, "The map have wrong numbers of player !\n", 40);
+	if (n == 6)
+		write(2, "The map is open or the player is out of the map !\n", 51);
 	free_all(data);
 	exit(1);
 }

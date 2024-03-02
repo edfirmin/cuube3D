@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:09:09 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 13:09:25 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 16:35:06 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	n_player(char c)
 	return (0);
 }
 
-void	check_back_n(t_data *data)
+void	check_bad_char(t_data *data)
 {
 	int	i;
 	int	j;
@@ -84,4 +84,21 @@ void	check_n_player(t_data *data)
 	}
 	if (n != 1)
 		error_mes(5, data);
+}
+
+int	is_out(char c)
+{
+	if (c == '0')
+		return (1);
+	if (c == '1')
+		return (1);
+	if (c == 'N')
+		return (1);
+	if (c == 'S')
+		return (1);
+	if (c == 'E')
+		return (1);
+	if (c == 'W')
+		return (1);
+	return (0);
 }

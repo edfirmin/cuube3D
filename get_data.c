@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 10:57:09 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:44:33 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 16:39:59 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	get_data(t_data *data, char **map, char *buff)
 	data->texture = malloc(1 * sizeof(t_texture));
 	get_texture(data, map);
 	tab_free(map);
-	printf ("tex_ceiling = %s\n", data->texture->ceiling);
-	printf ("tex_north = %s\n", data->texture->north);
-	printf ("tex_south = %s\n", data->texture->south);
-	printf ("tex_east = %s\n", data->texture->east);
-	printf ("tex_west = %s\n", data->texture->west);
-	printf ("tex_floor = %s\n", data->texture->floor);
+	// printf ("tex_ceiling = %s\n", data->texture->ceiling);
+	// printf ("tex_north = %s\n", data->texture->north);
+	// printf ("tex_south = %s\n", data->texture->south);
+	// printf ("tex_east = %s\n", data->texture->east);
+	// printf ("tex_west = %s\n", data->texture->west);
+	// printf ("tex_floor = %s\n", data->texture->floor);
 	n = get_map_size(data, buff);
 	data->map = get_map(n, buff);
 }

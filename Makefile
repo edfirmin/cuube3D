@@ -6,13 +6,13 @@
 #    By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 09:52:02 by edfirmin          #+#    #+#              #
-#    Updated: 2024/03/02 13:09:56 by edfirmin         ###   ########.fr        #
+#    Updated: 2024/03/02 16:38:30 by edfirmin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cub3D
 
-SRC = main.c utile1.c get_tex.c get_tex_utile.c get_data.c get_map.c pars_map.c pars_map_utile1.c
+SRC = main.c utile1.c utile2.c get_tex.c get_tex_utile.c get_data.c get_map.c pars_map.c pars_map_utile1.c
 
 FLG = -Wall -Wextra -Werror
 

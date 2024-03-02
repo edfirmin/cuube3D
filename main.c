@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 09:53:00 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 13:11:41 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 16:40:31 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,6 @@ void	print_tab(char **tab)
 		printf("tab[i] =%s\n", tab[i]);
 		i++;
 	}
-}
-
-int	tab_len(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-		i++;
-	return (i);
 }
 
 int	main(int argc, char **argv)
@@ -50,7 +40,8 @@ int	main(int argc, char **argv)
 		error_mes(2, data);
 	tab = ft_split(buff, '\n');
 	get_data(data, tab, buff);
-	print_tab(data->map);//rm
 	pars_map(data);
+	// print_tab(data->map);
+	//-----The Code-----//
 	return (0);
 }

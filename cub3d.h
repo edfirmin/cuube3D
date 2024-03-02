@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:00:05 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 13:11:06 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 16:37:21 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,9 @@ void	error_mes(int n, t_data	*data);
 char	*line(char *buffer, int fd, t_data *data);
 void	check_name(char *str, t_data *data);
 
+//----------utile2----------//
+int		tab_len(char **tab);
+
 //----------get_tex----------//
 void	get_texture(t_data *data, char **tab);
 void	get_texture2(t_data *data, char **tab, char **g_free);
@@ -78,11 +81,14 @@ int		c_back_n(char *str);
 
 //----------pars_map----------//
 void	pars_map(t_data *data);
+void	check_around(t_data *data, int i, int j);
+void	check_close_map(t_data *data);
 
 //----------pars_map_utile1----------//
 int		map_char(char c);
 int		n_player(char c);
-void	check_back_n(t_data *data);
+int		is_out(char c);
+void	check_bad_char(t_data *data);
 void	check_n_player(t_data *data);
 
 #endif
