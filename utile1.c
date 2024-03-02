@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 10:44:01 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 10:56:51 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 12:38:22 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	check_name(char *str, t_data *data)
 	i = 0;
 	while (str[i] && str[i] != '.')
 		i++;
-	if  (!str[i])
+	if (!str[i])
 		error_mes(1, data);
 	if (ft_strlen(&str[i]) != 4)
 		error_mes(1, data);

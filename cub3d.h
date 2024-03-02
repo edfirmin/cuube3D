@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:00:05 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:12:33 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 12:39:58 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CUB3D_H
 
 # include "lib/libft.h"
+# include "../minilibx-linux/mlx.h"
+# include "../minilibx-linux/mlx_int.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <sys/types.h>
@@ -55,7 +57,7 @@ void	check_name(char *str, t_data *data);
 //----------get_tex----------//
 void	get_texture(t_data *data, char **tab);
 void	get_texture2(t_data *data, char **tab, char **g_free);
-void	get_texture3(char *str, t_texture *tex, int n);\
+void	get_texture3(char *str, t_texture *tex, int n);
 
 //----------get_tex_utile----------//
 int		check_full(t_texture *tex);

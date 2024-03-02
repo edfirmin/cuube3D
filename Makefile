@@ -6,7 +6,7 @@
 #    By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 09:52:02 by edfirmin          #+#    #+#              #
-#    Updated: 2024/03/02 12:16:29 by edfirmin         ###   ########.fr        #
+#    Updated: 2024/03/02 12:35:32 by edfirmin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	cd lib ; make
-	gcc $(FLG) $(OBJ) minilibx-linux/libmlx_Linux.a lib/libft.a -o $(NAME)
+	gcc $(FLG) $(OBJ) ../minilibx-linux/libmlx_Linux.a lib/libft.a -o $(NAME)
 
 clean :
 	cd lib ; make clean
