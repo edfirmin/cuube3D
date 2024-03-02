@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 12:14:31 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:15:56 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 12:48:40 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	**get_map(int n, char *buff)
 			n++;
 		j++;
 	}
+	map[j] = NULL;
 	free(buff);
 	return (map);
 }

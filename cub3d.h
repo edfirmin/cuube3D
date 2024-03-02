@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:00:05 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:39:58 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:11:06 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,14 @@ int		get_map_size(t_data *data, char *buff);
 char	**get_map(int n, char *buff);
 char	*put_line(char *src);
 int		c_back_n(char *str);
+
+//----------pars_map----------//
+void	pars_map(t_data *data);
+
+//----------pars_map_utile1----------//
+int		map_char(char c);
+int		n_player(char c);
+void	check_back_n(t_data *data);
+void	check_n_player(t_data *data);
 
 #endif

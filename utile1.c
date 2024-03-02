@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 10:44:01 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:38:22 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:03:34 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,15 @@ void	error_mes(int n, t_data	*data)
 	if (n == 0)
 		write(2, "Error\ncub3D need 2 arguments !\n", 32);
 	if (n == 1)
-		write(2, "Error\nWrong map name !\n", 24);
+		write(2, "Error\nWrong file name !\n", 24);
 	if (n == 2)
 		write(2, "Error\nInvalide map !\n", 22);
 	if (n == 3)
 		write(2, "Error\nBad elements in the map file !", 37);
+	if (n == 4)
+		write(2, "Error\nThe file does not exist !\n", 33);
+	if (n == 5)
+		write(2, "Error\nThe map have wrong numbers of player !\n", 46);
 	free_all(data);
 	exit(1);
 }
@@ -62,7 +66,7 @@ char	*line(char *buffer, int fd, t_data *data)
 	int		i;
 
 	if (fd == -1)
-		error_mes(2, data);
+		error_mes(4, data);
 	str = ft_calloc(2, sizeof(char));
 	if (!buffer)
 		buffer = ft_calloc(sizeof(char), 1);

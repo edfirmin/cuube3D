@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 09:53:00 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:15:35 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/02 13:11:41 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,7 @@ int	main(int argc, char **argv)
 		error_mes(2, data);
 	tab = ft_split(buff, '\n');
 	get_data(data, tab, buff);
-	print_tab(data->map);
-	if (data)
-		return (0);
+	print_tab(data->map);//rm
+	pars_map(data);
 	return (0);
 }
