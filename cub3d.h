@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:00:05 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 16:37:21 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/05 10:03:52 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ void	check_name(char *str, t_data *data);
 
 //----------utile2----------//
 int		tab_len(char **tab);
+void	go_free(char **ttab, char **tab, char *buff, t_data *data);
 
 //----------get_tex----------//
-void	get_texture(t_data *data, char **tab);
+void	get_texture(t_data *data, char **tab, char *buff);
 void	get_texture2(t_data *data, char **tab, char **g_free);
 void	get_texture3(char *str, t_texture *tex, int n);
 

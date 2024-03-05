@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 12:14:31 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:48:40 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:58:28 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	get_map_size(t_data *data, char *buff)
 
 	i = -1;
 	n = 0;
-	while (n < 7 && buff[++i])
+	while (n < 6 && buff[++i])
 	{
 		while (buff[i] && buff[i] != '\n')
 			i++;
@@ -52,7 +52,7 @@ int	get_map_size(t_data *data, char *buff)
 			n++;
 			i++;
 		}
-		if (!buff[i] && n != 7)
+		if (!buff[i] && n != 6)
 		{
 			free(buff);
 			error_mes(2, data);

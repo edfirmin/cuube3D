@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 09:53:00 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 16:40:31 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/05 10:04:16 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ void	print_tab(char **tab)
 		i++;
 	}
 }
+
+// void	mumuse_mlx(t_data *data)
+// {
+
+// }
 
 int	main(int argc, char **argv)
 {
@@ -41,7 +46,8 @@ int	main(int argc, char **argv)
 	tab = ft_split(buff, '\n');
 	get_data(data, tab, buff);
 	pars_map(data);
-	// print_tab(data->map);
+	print_tab(data->map);
 	//-----The Code-----//
+	// mumuse_mlx(data);
 	return (0);
 }
