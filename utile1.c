@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 10:44:01 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/04 14:37:00 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/11 13:21:57 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ void	error_mes(int n, t_data	*data)
 		write(2, "The map have wrong numbers of player !\n", 40);
 	if (n == 6)
 		write(2, "The map is open or the player is out of the map !\n", 51);
+	if (n == 7)
+		write(2, "Bad color def.\n", 16);
 	free_all(data);
 	exit(1);
 }

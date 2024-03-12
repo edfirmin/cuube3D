@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 10:52:07 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/02 12:38:41 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:01:52 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	check_full(t_texture *tex)
 {
-	if (tex->ceiling && tex->east && tex->floor
-		&& tex->north && tex->south && tex->west)
+	if (tex->east && tex->north && tex->south
+		&& tex->west && tex->ceiling && tex->floor)
 		return (1);
 	return (0);
 }

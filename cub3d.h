@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:00:05 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/05 10:38:11 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:47:17 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define CUB3D_H
 
 # include "lib/libft.h"
-# include "../minilibx-linux/mlx.h"
-# include "../minilibx-linux/mlx_int.h"
+# include "../libx/mlx.h"
+# include "../libx/mlx_int.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <sys/types.h>
@@ -34,6 +34,8 @@ typedef struct s_texture
 	char	*east;
 	char	*floor;
 	char	*ceiling;
+	int		fl[3];
+	int		ce[3];
 }			t_texture;
 
 typedef struct s_data
@@ -93,5 +95,10 @@ int		n_player(char c);
 int		is_out(char c);
 void	check_bad_char(t_data *data);
 void	check_n_player(t_data *data);
+
+//----------pars_map_utile2----------//
+int		check_val(int *tab);
+void	get_fl(t_data *data);
+void	get_ce(t_data *data);
 
 #endif

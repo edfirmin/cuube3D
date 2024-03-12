@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:06:34 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/05 10:02:50 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:22:03 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ void	pars_map(t_data *data)
 	check_bad_char(data);
 	check_n_player(data);
 	check_close_map(data);
+	get_fl(data);
+	get_ce(data);
 	// error_mes(546, data);
 }

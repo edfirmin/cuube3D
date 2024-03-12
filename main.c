@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 09:53:00 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/05 10:04:16 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:55:26 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,22 @@ void	print_tab(char **tab)
 
 // }
 
+int	ft_close(void)
+{
+	exit (0);
+	return (1);
+}
+
 int	main(int argc, char **argv)
 {
 	t_data	*data;
 	char	*buff;
 	char	**tab;
+	// void	*ptr;
+	// void	*wind;
+	// void	*ima;
+	// int		x;
+	// int		y;
 
 	buff = NULL;
 	data = malloc (1 * sizeof(t_data));
@@ -47,7 +58,14 @@ int	main(int argc, char **argv)
 	get_data(data, tab, buff);
 	pars_map(data);
 	print_tab(data->map);
-	//-----The Code-----//
+	error_mes(131, data);
+	// ptr = mlx_init();
+	// wind = mlx_new_window(ptr, 500, 500, "yjnkj");
+	// ima = mlx_xpm_file_to_image(ptr, "image.xpm", &x, &y);
+	// mlx_put_image_to_window(ptr, wind, ima, 100, 100);
+	// mlx_hook(wind, 17, 1L << 21, ft_close, ima);
+	// mlx_loop(ptr);
+	//---The Code-----//
 	// mumuse_mlx(data);
 	return (0);
 }
