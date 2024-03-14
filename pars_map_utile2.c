@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 14:57:07 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/12 17:59:30 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/12 20:07:46 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	check_col(char *str)
 	{
 		if (str[i] == ',')
 			j++;
-		if (str[i] != ',' || !ft_isdigit(str[i]))
+		if (str[i] != ',' && !ft_isdigit(str[i]))
 			return (0);
 		i++;
 	}

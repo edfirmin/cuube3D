@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:00:05 by edfirmin          #+#    #+#             */
-/*   Updated: 2024/03/11 15:47:17 by edfirmin         ###   ########.fr       */
+/*   Updated: 2024/03/14 16:50:43 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@
 # include <errno.h>
 # include <math.h>
 
+# define SIZE_X 960
+# define SIZE_Y 500
+
 typedef struct s_texture
 {
 	char	*north;
@@ -38,16 +41,38 @@ typedef struct s_texture
 	int		ce[3];
 }			t_texture;
 
+typedef struct s_vars
+{
+	void	*ptr;
+	void	*wind;
+	void	*im_no;
+	void	*im_so;
+	void	*im_es;
+	void	*im_we;
+}				t_vars;
+
+typedef struct s_pers
+{
+	double	posX;
+	double	posY;
+	double	dirX;
+	double	dirY;
+	double	planX;
+	double	planY;
+}				t_pers;
+
+typedef struct s_ray
+{
+	/
+}				t_ray;
+
+
 typedef struct s_data
 {
 	char		**map;
 	t_texture	*texture;
+	t_vars		lmlx;
 }			t_data;
-
-// typedef struct s_player
-// {
-
-// };
 
 //----------utile1----------//
 void	free_all(t_data *data);
